@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Assets/Css/style.css" rel="stylesheet" />
+    <link href="~/Assets/Css/layout.css" rel="stylesheet" />
+    <link href="~/Assets/Css/responsive.css" rel="stylesheet" />
+    <link href="~/Assets/Css/color.css" rel="stylesheet" />
+    <title>@ViewBag.title</title>
+</head>
+<body>
+    <div class="bg-pri">
+        <header data-theme="dark">
+            <div class="header">
+                <div class="left">
+                    <a href="tel: 0938717380" class="tx-white">
+                        <i class="icon icon-smartphone"></i>
+                        0938-717-380
+                    </a>
+                </div>
+                <div class="profile">
+                    <span class="tx-pri">ldphong</span>
+                    <span class="tx-pri"> | </span>
+                    <a href="/Home/Logout" class="tx-pri">Thoát</a>
+                </div>
+            </div>
+        </header>
+        <div class="layout-2">
+            <aside class="p">
+                <section class="mt">
+                    <h2 class="h2">Trang quản trị</h2>
+                    <br />
+                    <ul class="list">
+                        <li>
+                            <a href="">Trang chủ</a>
+                        </li>
+                        <li>
+                            <a href="/Admin/Product/Index">Sản phẩm</a>             
+                        </li>
+                        <li>
+                            <a href="">Đơn hàng</a>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+            <main class="p">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+</body>
+</html>

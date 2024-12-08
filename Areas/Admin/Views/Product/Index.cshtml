@@ -1,0 +1,43 @@
+﻿@model IEnumerable<WebPTCOM.Models.Product>
+
+@{
+    ViewBag.Title = "Sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Quản lý sản phẩm</h2>
+<br />
+@Html.ActionLink("Thêm sản phẩm mới", "Insert")
+<table class="table mt">
+    <thead>
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th>Hình</th>
+            <th>Chi tiết</th>
+            <th>Giá</th>
+            <th>Tác vụ</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                <img src="@Url.Content("~/Uploads/Photo/" + item.Photo)" alt="Photo" class="img-30" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Xoá", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,179 @@
+/**************************************************************************************/
+/*                                       Gradient                                     */
+/**************************************************************************************/
+/* background gradient */
+.gra {
+    background-image: linear-gradient(190deg, #f83600 0%, #fee140 100%);
+    transition: background-image 3s ease-in-out;
+    &:hover {
+      background-image: linear-gradient(90deg, #fee140 0%, #f83600 100%);
+    }
+  }
+  .gra01 {
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  }
+  .gra02 {
+    background-image: linear-gradient(to right, #decba4, #3e5151);
+  }
+  .gra01 {
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  }
+  .gra03 {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  }
+  .gra04 {
+    background-image: linear-gradient(to right, #fffbd5, #b20a2c);
+  }
+  .gra05 {
+    background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  }
+  .gra06 {
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  }
+  .gra07 {
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
+  }
+  .gra08 {
+    background-image: linear-gradient(to right, #870000, #190a05);
+  }
+  .gra09 {
+    background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+  }
+  .gra10 {
+    background-image: linear-gradient(
+      to right,
+      rgb(242, 112, 156),
+      rgb(255, 148, 114)
+    );
+  }
+  .gra11 {
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(156, 252, 248, 1) 11.2%,
+      rgba(110, 123, 251, 1) 91.1%
+    );
+  }
+  .gra12 {
+    background-image: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+  }
+  .gra13 {
+    background-image: linear-gradient(
+      95.2deg,
+      rgba(173, 252, 234, 1) 26.8%,
+      rgba(192, 229, 246, 1) 64%
+    );
+  }
+  .gra14 {
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+  }
+  .gra15 {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+  }
+  .gra16 {
+    background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+  }
+  .gra17 {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  }
+  .gra18 {
+    background-image: linear-gradient(to right, #00b09b, #96c93d);
+  }
+  .gra19 {
+    background-image: radial-gradient(
+      circle 759px at -6.7% 50%,
+      rgba(80, 131, 73, 1) 0%,
+      rgba(140, 209, 131, 1) 26.2%,
+      rgba(178, 231, 170, 1) 50.6%,
+      rgba(144, 213, 135, 1) 74.1%,
+      rgba(75, 118, 69, 1) 100.3%
+    );
+  }
+  
+  /* text gradient */
+  .text-gra {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* hr | line gradient */
+  .hr-gra {
+    margin: 10px 0 10px 0;
+    display: block;
+    border: none;
+    height: 1px;
+    background: #0071b9;
+    background: linear-gradient(
+      to right,
+      white,
+      #0071b9,
+      #26abff,
+      #0071b9,
+      white
+    );
+  }
+  
+  /* border gradient */
+  .bd-gra {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  }
+
+
+  /* Text animation */
+.tx-blink {
+    animation: blinker 1s linear infinite;
+  }
+  
+  .tx-light span {
+    font-weight: 700;
+    animation: light 10s linear infinite;
+  }
+  
+  .tx-light span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .tx-light span:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .tx-light span:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  .tx-light span:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+  
+  .tx-light span:nth-child(5) {
+    animation-delay: 2s;
+  }
+  
+  .tx-neon {
+    color: #fff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff,
+      0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+    animation: flicker 1.5s infinite alternate;
+  }
+  
+  .tx-shine {
+    background: linear-gradient(
+      to right,
+      #7953cd 20%,
+      #00affa 30%,
+      #0190cd 70%,
+      #764ada 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    background-size: 500% auto;
+    animation: txtshine 5s ease-in-out infinite alternate;
+  }

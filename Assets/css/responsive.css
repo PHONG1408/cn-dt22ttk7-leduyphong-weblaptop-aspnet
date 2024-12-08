@@ -1,0 +1,200 @@
+/* Hiển thị cho tablet, nên PC và SP sẽ ẩn */
+@media only screen and (max-width: 1024px) {
+  .layout-3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    .content {
+      order: 1;
+      width: 100%;
+    }
+    .left {
+      order: 2;
+      width: 50%;
+    }
+    .right {
+      order: 3;
+      width: 50%;
+    }
+  }
+}
+
+/* Hiển thị cho SP, nên tablet và PC sẽ ẩn */
+@media only screen and (max-width: 640px) {
+  :root {
+    --m: 0.5rem;
+    --p: 0.5rem;
+  }
+
+  header {
+    display: none;
+  }
+
+  .col,
+  .col-25,
+  .col-30,
+  .col-40,
+  .col-50,
+  .col-70,
+  .col-75 {
+    width: 100%;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /*  */
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  /* image */
+  .img-thumb {
+    height: 120px;
+  }
+
+  /* Layout 2 cột*/
+  .layout-2 {
+    main {
+      order: 1;
+      width: 100%;
+      padding: 0;
+    }
+    aside {
+      width: 100%;
+      order: 2;
+      margin-top: 10px;
+    }
+  }
+
+  /* Layout 3 cột */
+  .layout-3 {
+    .content {
+      order: 2;
+      width: 100%;
+    }
+    aside {
+      padding-top: 1rem;
+    }
+    .left {
+      background-color: var(--bg-sec);
+      order: 1;
+      width: 100%;
+      border-bottom: thin solid var(--bd-pri);
+      margin-bottom: 1rem;
+    }
+    .right {
+      order: 3;
+      width: 100%;
+    }
+  }
+
+  .slideshow > .slide > a > .slide-img {
+    height: 300px;
+  }
+
+  .banner > a > .banner-img {
+    height: 300px;
+  }
+
+  .product-detail > .img-display > .img-showcase > img {
+    height: 300px;
+  }
+}
+
+/* Hiển thị trên di động */
+@media only screen and (max-width: 430px) {
+  footer {
+    display: none;
+  }
+
+  .nav-mobi {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0 15px;
+    border-top: 1px solid var(--bd-pri);
+    font-size: 12px;
+    /* CSS Glass */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    .item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      margin: 0 5px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      transition: var(--trs);
+      color: var(--tx-pri);
+      i {
+        width: 15px;
+        height: 15px;
+        background-color: var(--tx-pri);
+      }
+      &:hover {
+        transform: scale(1.1);
+        color: var(--orange);
+        i {
+          background-color: var(--orange);
+        }
+      }
+    }
+    .item.is-active {
+      color: var(--orange);
+      i {
+        background-color: var(--orange);
+      }
+    }
+    .item.is-active::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 120%;
+      height: 120%;
+      transform: translate(-10%, -10%);
+      background: radial-gradient(var(--orange), transparent);
+      filter: blur(10px);
+      opacity: 0.2;
+    }
+  }
+
+  .category-mobile {
+    display: block;
+    padding: 5px;
+    background-color: var(--black);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    a {
+      background-color: var(--dark);
+      border-radius: 5px;
+      margin-right: 10px;
+      padding: 5px 10px;
+      color: var(--white);
+      font-size: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a:hover {
+      color: var(--orange);
+    }
+  }
+
+  .login,
+  .register {
+    border: none;
+  }
+}

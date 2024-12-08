@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Assets/css/style.css" rel="stylesheet" />
+    <link href="~/Assets/css/layout.css" rel="stylesheet" />
+    <link href="~/Assets/css/color.css" rel="stylesheet" />
+    <link href="~/Assets/css/responsive.css" rel="stylesheet" />
+    <title>PTCOM</title>
+</head>
+<body>
+    <!-- Header -->
+    <header data-theme="dark">
+        <div class="container">
+            <div class="header">
+                <!-- Logo -->
+                <h1 class="h1">
+                    <a href="/Home/Index">
+                        <span class="tx-yellow">P</span>
+                        <span class="tx-blue">T</span>
+                        <span class="tx-grey">C</span>
+                        <span class="tx-white">O</span>
+                        <span class="tx-orange">M</span>
+                    </a>
+                </h1>
+                <!-- Search -->
+                <div class="search">
+                    <input type="text" placeholder="" />
+                    <i class="icon icon-search"></i>
+                </div>
+                <!-- Links -->
+                <div class="links">
+                    <div class="cart">
+                        <i class="icon icon-cart" title="Giỏ hàng"></i>
+                        <span>5</span>
+                    </div>
+                    <a href="/Home/Login">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Menu -->
+    <nav data-theme="dark">
+        <div class="container">
+            <!-- Nav -->
+            <div class="nav">
+                <a href="" class="icon icon-home"></a>
+                <div class="scroll-x">
+                    <a href="/Home/Index" class="link link-center">Sản phẩm</a>
+                    <a href="/Home/Index" class="link link-center">Giới thiệu</a>
+                    <a href="/Home/Index" class="link link-center">Liên hệ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="showcase">
+            @RenderBody()
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer data-theme="dark">
+        <section class="footer-bottom">
+            <div class="tx-ce">
+                <span class="tx-white">&copy; 2024 - </span>
+                <span class="tx-light">
+                    <span class="tx-yellow">P</span>
+                    <span class="tx-blue">T</span>
+                    <span class="tx-grey">C</span>
+                    <span class="tx-white">O</span>
+                    <span class="tx-orange">M</span>
+                </span>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
+

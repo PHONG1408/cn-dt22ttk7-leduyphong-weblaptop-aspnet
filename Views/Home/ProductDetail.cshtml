@@ -1,0 +1,84 @@
+﻿@model WebPTCOM.Models.Product
+
+@{
+    ViewBag.Title = "Chi tiết sản phẩm";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<main class="container bg-pri">
+    <div class="flex-row">
+        <div class="col-50">
+            <div class="product-detail">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <img src="@Url.Content("~/Uploads/Photo/" + Model.Photo)" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-50">
+            <div class="p">
+                <div class="group">
+                    <ul class="breadcrumbs">
+                        <li><a href="/Home/Index">Trang chủ</a></li>
+                        <li><a href="/Home/Index">Sản phẩm</a></li>
+                    </ul>
+                </div>
+                <div class="group mt">
+                    <h2 class="tx-cap bar-bottom">@Model.Title</h2>
+                    <div class="price mb-1">
+                        <p>
+                            Giá bán: <span class="new-price">@Model.Price</span>&#160;<ins>đ</ins>
+                        </p>
+                    </div>
+
+                    <div class="border p">
+                        <div class="user">
+                            <img src="@Url.Content("~/Uploads/Photo/" + Model.Photo)" alt="author" />
+                            <div class="user-info">
+                                <p class="name">ldphong</p>
+                                <p class="email">cskh@ptcom.vn</p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="flex">
+                            <div class="col-50 mr">
+                                <a href="">
+                                    <button class="block btn-outline outline-info">
+                                        <i class="icon icon-home"></i>
+                                        <span>Xem cửa hàng</span>
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="col-50">
+                                <a href="tel:0938717380">
+                                    <button class="block btn-outline outline-success">
+                                        <i class="icon icon-smartphone"></i>
+                                        <span>0938717380</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-body">
+                        <h2 class="pt">Mô tả</h2>
+                        @Model.Description
+                    </div>
+                    <div class="purchase-info mt">
+                        <input type="number" min="0" value="1" style="width: 100px" />
+                        <button class="btn-outline outline-success">
+                            <i class="icon icon-cart"></i>
+                            <span>Thêm giỏ hàng</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p">
+        <h2 class="title-l">Thông tin chi tiết</h2>
+    </div>
+</main>

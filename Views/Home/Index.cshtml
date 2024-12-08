@@ -1,0 +1,29 @@
+﻿@model IEnumerable<WebPTCOM.Models.Product>
+
+@{
+    ViewBag.Title = "Sản phẩm";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="grid-4">
+    @foreach (var item in Model)
+    {
+        <a href="/Home/ProductDetail/@item.Id" class="card">
+            <div class="card-img">
+                <img src="@Url.Content("~/Uploads/Photo/" + item.Photo)" alt="demo" />
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">@item.Title</h2>
+                <div class="card-text">
+                    <p class="text-line line3">
+                        @item.Description
+                    </p>
+                </div>
+            </div>
+            <hr />
+            <div class="card-footer">
+                <span class="new-price">@item.Price&#160;<ins>đ</ins></span>
+            </div>
+        </a>
+    }
+</div>

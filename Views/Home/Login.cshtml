@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Assets/css/style.css" rel="stylesheet" />
+    <link href="~/Assets/css/layout.css" rel="stylesheet" />
+    <link href="~/Assets/css/responsive.css" rel="stylesheet" />
+    <link href="~/Assets/css/color.css" rel="stylesheet" />
+    <title>PTCOM | Đăng nhập</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Đăng nhập -->
+        <div class="login bg-pri">
+            <form action="Login" method="post">
+                <h3 class="title-page tx-ce">ĐĂNG NHẬP</h3>
+                <div class="tx-error tx-ce pt">@ViewBag.msg</div>
+                <br />
+                <div class="row mt">
+                    <label>Tên đăng nhập</label><br />
+                    <input placeholder=""
+                           type="text"
+                           name="Username"
+                           id="Username" />
+                </div>
+                <div class="row mt">
+                    <label>Mật khẩu</label><br />
+                    <input placeholder=""
+                           type="password"
+                           name="Password"
+                           id="Password" />
+                </div>
+                <div class="row mt">
+                    Bạn chưa có tài khoản?
+                    @Html.ActionLink("Đăng ký ngay", "Register")
+                </div>
+                <div class="row mt">
+                    @Html.ActionLink("Quay lại trang chủ", "Index")
+                    <input class="float-right"
+                           type="submit"
+                           name="submit"
+                           value="Đăng nhập" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

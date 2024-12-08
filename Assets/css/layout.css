@@ -1,0 +1,295 @@
+.layout-2,
+.layout-3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+.layout-2 {
+    aside
+
+{
+    padding: 0 1rem;
+    order: 1;
+    width: 25%;
+    border-right: 1px solid var(--bd-pri);
+}
+
+main {
+    order: 2;
+    width: 75%;
+}
+
+}
+
+.layout-3 {
+    aside
+
+{
+    width: 25%;
+}
+
+.left {
+    order: 1;
+}
+
+.right {
+    order: 3;
+}
+
+.content {
+    width: 50%;
+    order: 2;
+}
+
+}
+
+/* Layout */
+header {
+    background-color: var(--bg-pri);
+    .header
+
+{
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .search
+
+{
+    flex: 1;
+    margin: 0 50px;
+    input
+
+{
+    height: 35px;
+}
+
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--tx-pri);
+}
+
+.notification,
+.cart {
+    position: relative;
+    i
+
+{
+    width: 15px;
+    height: 15px;
+    background-color: var(--warning);
+    &:hover
+
+{
+    background-color: var(--lk-tx);
+}
+
+}
+
+span {
+    position: absolute;
+    font-size: var(--fs-tiny);
+    top: -8px;
+    left: 16px;
+}
+
+}
+}
+}
+
+nav {
+    background-color: var(--bg-ter);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 10;
+    .nav
+
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.3rem 1rem;
+    .icon
+
+{
+    padding: 8px;
+    margin-right: 1rem;
+}
+
+}
+
+.logo {
+    order: 1;
+    font-size: var(--fs-h1);
+}
+
+}
+
+/* Ẩn menu mobi */
+.nav-mobi,
+.category-mobile {
+    display: none;
+}
+
+/* Footer */
+footer {
+    color: var(--tx-pri);
+    .footer-top
+
+{
+    padding: var(--p) 0;
+    background: var(--bg-sec);
+    ul
+
+{
+    padding-left: 0;
+}
+
+}
+
+.footer-bottom {
+    padding: var(--p);
+    background-color: var(--bg-ter);
+}
+
+}
+
+/* Login - Register */
+.login,
+.register {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 95%;
+    background-color: var(--bg-pri);
+    border: 1px solid var(--bd-pri);
+    max-width: 380px;
+    padding: 2rem;
+}
+
+/* Card */
+.card,
+.card-h {
+    position: relative;
+    display: block;
+    background-color: var(--bg-pri);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--bs);
+    -moz-box-shadow: var(--bs);
+    -webkit-box-shadow: var(--bs);
+    transition: var(--trs);
+}
+
+.card-h {
+    display: flex;
+}
+
+.card-body,
+.card-header,
+.card-footer {
+    padding: var(--p);
+}
+
+.card-title {
+    color: var(--tx-pri);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: var(--m);
+}
+
+.card-text {
+    color: var(--tx-pri);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.card-hot {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    background: var(--red);
+    color: var(--white);
+    padding: 3px 10px;
+}
+
+/*  */
+.card-service {
+    border-radius: 6px;
+    box-shadow: var(--bs-ser);
+    border: solid 1px var(--bd-pri);
+    background-color: var(--bg-pri);
+    text-align: center;
+    border-top: 6px solid var(--success);
+    img
+
+{
+    width: 100%;
+    border-radius: 6px;
+}
+
+}
+
+.card-ads {
+    max-width: 300px;
+    overflow: hidden;
+    .title, .price
+
+{
+    font-size: var(--fs-small);
+}
+
+.sub-title {
+    font-size: var(--font-tiny);
+}
+
+}
+
+.card-ads-h {
+    display: flex;
+    .left
+
+{
+    width: 25%;
+}
+
+.right {
+    padding-left: 10px;
+    width: 75%;
+}
+
+}
+
+.card-img {
+    border-radius: 5px;
+    position: relative;
+    img
+
+{
+    border-radius: 5px;
+}
+
+.card-content {
+    position: absolute;
+    padding: 10px;
+    color: var(--white);
+    /* other styles (left, top, right, and padding) */
+    bottom: 0;
+    background-image: linear-gradient( 0deg, hsla(0, 0%, 35.29%, 0) 0%, hsla(0, 0%, 34.53%, 0.034375) 16.36%, hsla(0, 0%, 32.42%, 0.125) 33.34%, hsla(0, 0%, 29.18%, 0.253125) 50.1%, hsla(0, 0%, 24.96%, 0.4) 65.75%, hsla(0, 0%, 19.85%, 0.546875) 79.43%, hsla(0, 0%, 13.95%, 0.675) 90.28%, hsla(0, 0%, 7.32%, 0.765625) 97.43%, hsla(0, 0%, 0%, 0.8) 100% );
+}
+}

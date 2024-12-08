@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Assets/css/style.css" rel="stylesheet" />
+    <link href="~/Assets/css/layout.css" rel="stylesheet" />
+    <link href="~/Assets/css/responsive.css" rel="stylesheet" />
+    <link href="~/Assets/css/color.css" rel="stylesheet" />
+    <title>PTCOM | Đăng ký</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Đăng ký -->
+        <div class="register bg-pri">
+            <h3 class="title-page tx-ce">ĐĂNG KÝ</h3> 
+            <br />
+            <div class="row mt">
+                <label for="username">Tên đăng nhập</label>
+                <input placeholder="Tên đăng nhập"
+                       type="text"
+                       name="username"
+                       id="username" />
+            </div>
+        
+            <div class="row mt">
+                <label for="password">Mật khẩu</label>
+                <input placeholder="Mật khẩu"
+                       type="password"
+                       name="password"
+                       id="password" />
+            </div>
+
+            <div class="row mt">
+                <label for="repass">Nhập lại mật khẩu</label>
+                <input placeholder="Nhập lại mật khẩu"
+                       type="password"
+                       name="repass"
+                       id="repass" />
+            </div>
+
+            <div class="row mt">
+                @Html.ActionLink("Quay lại rang chủ", "Index")
+                <input class="float-right"
+                       type="submit"
+                       name="submit"
+                       value="Đăng ký" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
